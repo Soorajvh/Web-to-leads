@@ -6,6 +6,7 @@
     <title>Web to Lead From</title>
     <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 
   <body>
@@ -15,6 +16,11 @@
       method="POST"
       onsubmit="beforesubmit()"
     >
+      <input
+        type="hidden"
+        name="captcha_settings"
+        value='{"keyname":"WebToLead","fallback":"true","orgId":"00DNS00000Bfpcv","ts":""}'
+      />
       <input type="hidden" name="oid" value="00DNS00000Bfpcv" />
       <input
         type="hidden"
@@ -64,6 +70,11 @@
       ><br /> -->
 
       <input type="submit" name="submit" class="submit" />
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LdZfwcrAAAAANmL-u59pNEZ0hCs83JOiCBO4yzH"
+      ></div>
+      <br />
     </form>
   </body>
 </html>
